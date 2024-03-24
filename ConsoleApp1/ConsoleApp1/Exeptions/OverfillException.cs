@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Exeptions
 {
-    internal class OverfillException: Exception
+    public class OverfillException : Exception
     {
+        public OverfillException(string message) : base(message)
+        {
+        }
     }
 }

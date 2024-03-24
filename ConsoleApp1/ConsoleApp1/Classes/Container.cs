@@ -21,6 +21,7 @@ namespace ConsoleApp1.Classes
         public int Height { get; set; }
         public int ConteinerWeight { get; set; }
         public int Depth { get; set; }
+        public char Kind {  get; set; }
 
         public int MaxWeight { get; set; }
 
@@ -39,7 +40,7 @@ namespace ConsoleApp1.Classes
             }
             set
             {
-                _SerialNumber = $"KON-C-{SerialNumber.GenerateUniqueId()}";
+                _SerialNumber = "KON-" + Kind + $"-{Singleton.GenerateUniqueId}";
             }
         }
 

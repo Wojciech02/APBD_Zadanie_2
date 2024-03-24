@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Classes
 {
-    public static class SerialNumber
+    public static class Singleton
     {
         public static List<int> SerialNumbers { get; set; } = new();
 

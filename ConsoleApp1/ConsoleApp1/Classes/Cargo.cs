@@ -13,7 +13,7 @@ namespace ConsoleApp1.Classes
             Name = name;
             Amount = amount;
         }
-        public String Name { get; protected set; }
+        public String Name { get; protected set;}
         public int Amount { get; protected set;}
     }
 }

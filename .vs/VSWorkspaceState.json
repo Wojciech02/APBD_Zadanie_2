@@ -1,6 +1,12 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\ConsoleApp1",
+    "\\ConsoleApp1\\ConsoleApp1",
+    "\\ConsoleApp1\\ConsoleApp1\\Classes",
+    "\\ConsoleApp1\\ConsoleApp1\\Exeptions",
+    "\\ConsoleApp1\\ConsoleApp1\\Interfaces"
   ],
+  "SelectedNode": "\\ConsoleApp1\\ConsoleApp1\\Classes\\Container.cs",
   "PreviewInSolutionExplorer": false
 }
