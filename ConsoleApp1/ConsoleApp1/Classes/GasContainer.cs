@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Classes
 {
-    public class LiquidContainer<T> : Container<T>, HazardNotifier
+    public class GasContainer<T> : Container<T>, HazardNotifier
     {
-        public LiquidContainer(int Weight, int Height, int ConteinerWeight, int Depth, int MaxWeight) : base(Weight, Height, ConteinerWeight, Depth, MaxWeight)
-        {
-            this.Kind = 'L';
+        public double Pressure { get; set; }
 
-        }
+        public GasContainer(int Weight, int Height, int ConteinerWeight, int Depth, int MaxWeight, double Pressure) : base(Weight, Height, ConteinerWeight, Depth, MaxWeight)
+        {
+            this.Kind = 'G';
+            this.Pressure = Pressure;
+
+    }
 
         public void NotifyDanger(string mesage)
         {
@@ -20,7 +23,7 @@ namespace ConsoleApp1.Classes
         }
         public override unloading()
         {
-            Weight = 0;
+            Weight = Weiht * 0.05;
         }
         public override void loading(T cargo)
         {
@@ -29,14 +32,7 @@ namespace ConsoleApp1.Classes
                 throw new OverfillException("Cargo weight exceeds container capacity");
             }
 
-            if (cargo.Amount + Weight > MaxWeight * 0.5)
-            {
-                NotifyDanger(SerialNumber);
-            }
-
             Weight += cargo.Amount;
         }
 
     }
-
-}
