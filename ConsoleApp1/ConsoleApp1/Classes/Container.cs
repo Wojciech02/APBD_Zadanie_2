@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1.Classes
 {
-    public abstract class Container<T>
+    public abstract class Container<T : Cargo>
     {
         protected Container(int Weight, int Height, int ConteinerWeight, int Depth, int MaxWeight) 
         {
